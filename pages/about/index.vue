@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col justify-between h-screen w-full">
+	<div class="flex flex-col h-screen w-full">
 
 		<Head>
 			<Title>Poopometer - About</Title>
@@ -15,11 +15,13 @@
 		<!-- About -->
 		<div class="flex flex-col p-[16px] md:p-[100px] w-full justify-center gap-6 text-2xl">
 			<h2 class="text-[#615549]">
-				The poopometer is a simple app that tells you how bad the world situation is. It fetches the recent news
-				and
-				then sends them to OpenAi to make an AI generated evaluation of how the world situation is right now.
-			</h2>
+				The poopometer is a simple app that tells you how bad the world situation is.
 
+			</h2>
+			<h2 class="text-[#615549]">
+				It fetches the recent world news and
+				then sends them to gpt-4o make an AI generated evaluation of how f***** up the world situation is right now.
+			</h2>
 			<h1 class="text-[#615549] text-lg md:text-2xl">
 				Made with ❤️ by <a href="https://github.com/saravenpi" class="underline">saravenpi</a>
 			</h1>
