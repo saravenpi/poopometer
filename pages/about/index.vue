@@ -1,5 +1,6 @@
 <template>
 	<div class="flex flex-col justify-between h-screen w-full">
+
 		<Head>
 			<Title>Poopometer - About</Title>
 		</Head>
@@ -12,10 +13,12 @@
 		</header>
 
 		<!-- About -->
-		<div class="flex flex-col p-[100px] w-full justify-center gap-6 items-center text-2xl">
+		<div class="flex flex-col p-[16px] md:p-[100px] w-full justify-center gap-6 items-center text-3xl">
 			The poopometer is a simple app that tells you how bad the world situation is. It fetches the recent news and
 			then sends them to OpenAi to make an AI generated evaluation of how the world situation is right now.
-			<a href="/" class="text-[#615549] px-8 py-2 font-extrabold border-2 border-[#615549] rounded-full transition-colors duration-300 hover:bg-[#615549] hover:text-[#E4DDD5] text-sm">Go back</a>
+			<a href="/"
+				class="text-[#615549] px-8 py-2 font-extrabold border-2 border-[#615549] rounded-full transition-colors duration-300 hover:bg-[#615549] hover:text-[#E4DDD5] text-sm">Go
+				back</a>
 		</div>
 
 		<!-- Footer -->
