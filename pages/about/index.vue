@@ -15,10 +15,10 @@
 		<!-- About -->
 		<div class="flex flex-col p-[16px] md:p-[100px] w-full justify-center gap-6 text-2xl">
 			<h2 class="text-[#615549]">
-				The Poopometer: A simple app that gauges the state of the world.
+				The Poopometer is a simple app that gauges the state of the world.
 			</h2>
 			<h2 class="text-[#615549]">
-				By analyzing recent world news, it uses GPT-4 to generate an AI-driven assessment of just how chaotic or
+				By analyzing recent world news, it uses gpt-4o to generate an AI-driven assessment of just how chaotic or
 				challenging the current global situation might be.
 			</h2>
 			<h1 class="text-[#615549] text-lg md:text-2xl">
