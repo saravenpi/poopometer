@@ -8,7 +8,7 @@
 		<header class="flex flex-row p-6 md:p-10 w-full justify-between items-center gap-3 flex-wrap">
 			<div class="flex flex-row gap-3 items-center ">
 				<img src="/poop.png" alt="poop" class="w-8 md:w-16" />
-				<h1 class="text-2xl md:text-4xl font-extrabold">Poopometer</h1>
+				<h1 class="text-3xl md:text-4xl font-extrabold">Poopometer</h1>
 			</div>
 			<!-- Buttons -->
 			<div>
