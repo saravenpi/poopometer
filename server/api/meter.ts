@@ -7,6 +7,8 @@ const openai = new OpenAI({
 	apiKey: config.OPENAI_API_KEY
 });
 
+const PROMPT = `You are an AI model tasked with assessing the global situation based on recent events. Please provide a single number between 0 and 100 that represents the severity of the world situation, where 0 means no concern and 100 means extreme concern. Your response should be just the number, without any additional text or explanation.`
+
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event);
 	const articles = body;
@@ -15,13 +17,15 @@ export default defineEventHandler(async (event) => {
 	if (!articles || articles.length === 0) {
 		return { error: 'No articles provided' };
 	}
-	const prompt = `Based on the following recent events: ${eventTitles}\n Give a number between 0 and 100 that indicates how bad the world situation is. Even if the data is not large, you must in always return an estimation number. Just your estimation between 0 and 100. Nothing else just a number.`
 
 	try {
 		const response = await openai.chat.completions.create({
 			model: 'gpt-4o',
-			messages: [{ role: 'system', content: prompt }],
-			max_tokens: 150,
+			messages: [
+				{ role: 'system', content: PROMPT },
+				{ role: 'user', content: `Here are the recent events: ${eventTitles}` }
+			],
+			max_tokens: 5,
 		});
 
 		const indicator = response.choices[0].message.content?.trim() || "42";
