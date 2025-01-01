@@ -7,7 +7,10 @@ const openai = new OpenAI({
 	apiKey: config.OPENAI_API_KEY
 });
 
-const PROMPT = `You are an AI model tasked with assessing the global situation based on recent events. Please provide a single number between 0 and 100 that represents the severity of the world situation, where 0 means no concern and 100 means extreme concern. Your response should be just the number, without any additional text or explanation.`
+const PROMPT = `You are an AI model tasked with evaluating the global situation based on the following recent events.`
+	+ ` Analyze the events and provide a single number between 0 and 100 that represents the severity of the world situation,`
+	+ ` where 0 indicates no concern and 100 indicates extreme concern.`
+	+ ` Your response should be solely the number, without any additional text or explanation.`
 
 export default defineEventHandler(async (event) => {
 	const body = await readBody(event);
