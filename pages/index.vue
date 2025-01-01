@@ -62,7 +62,7 @@
 							<span class="text-sm font-semibold text-[#615549] max-w-32 md:max-w-64 truncate">{{
 								event.title
 							}}</span>
-							<a href="event.link" target="_blank"
+							<a :href="event.link" target="_blank"
 								class="text-sm text-blue-500 hover:underline max-w-32 truncate">{{
 									event.link }}</a>
 						</div>
