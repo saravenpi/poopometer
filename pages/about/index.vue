@@ -5,7 +5,7 @@
 			<Title>Poopometer - About</Title>
 		</Head>
 		<!-- Header -->
-		<header class="flex flex-row p-3 md:p-10 w-full justify-between">
+		<header class="flex flex-row p-6 md:p-10 w-full justify-between">
 			<div class="flex flex-row gap-3 items-center ">
 				<img src="/poop.png" alt="poop" class="w-16" />
 				<h1 class="text-[#615549] text-2xl md:text-4xl font-extrabold">Poopometer</h1>
@@ -28,9 +28,5 @@
 				Go back
 			</a>
 		</div>
-
-		<!-- Footer -->
-		<footer class="flex flex-row p-3 md:p-10 w-full justify-between">
-		</footer>
 	</div>
 </template>
