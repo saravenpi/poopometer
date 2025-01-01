@@ -30,7 +30,7 @@
 					{{ percentage }}%
 				</div>
 				<div class="text-2xl">
-					in deep shit
+					in deep sh***
 				</div>
 			</div>
 
