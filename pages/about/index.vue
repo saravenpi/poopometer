@@ -7,7 +7,7 @@
 		<!-- Header -->
 		<header class="flex flex-row p-6 md:p-10 w-full justify-between">
 			<div class="flex flex-row gap-3 items-center ">
-				<img src="/poop.png" alt="poop" class="w-16" />
+				<img src="/poop.png" alt="poop" class="w-8 md:w-16" />
 				<h1 class="text-[#615549] text-3xl md:text-4xl font-extrabold">Poopometer</h1>
 			</div>
 		</header>
