@@ -13,7 +13,7 @@
 		</header>
 
 		<!-- About -->
-		<div class="flex flex-col p-[16px] md:p-[100px] w-full justify-center gap-6 items-center text-3xl">
+		<div class="flex flex-col p-[16px] md:p-[100px] w-full justify-center gap-6 items-center text-2xl">
 			The poopometer is a simple app that tells you how bad the world situation is. It fetches the recent news and
 			then sends them to OpenAi to make an AI generated evaluation of how the world situation is right now.
 			<a href="/"
