@@ -125,14 +125,24 @@ export default {
 		async fetchNews() {
 			try {
 				const response = await axios.get('https://ok.surf/api/v1/cors/news-feed');
-				this.events = response.data.World.map(article => ({
+				const news = [
+					...response.data.Business,
+					...response.data.Entertainment,
+					...response.data.Health,
+					...response.data.Science,
+					...response.data.Sports,
+					...response.data.Technology,
+					...response.data.US,
+					...response.data.World
+				]
+				this.events = news.map(article => ({
 					title: article.title,
 					imageUrl: article.og,
 					link: article.link
 				}));
 				this.loading = false;
 				this.fetchPercentage();
-				this.events = response.data.World.map(article => ({
+				this.events = news.map(article => ({
 					title: article.title,
 					imageUrl: article.og,
 					link: article.link
