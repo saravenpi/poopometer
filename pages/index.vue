@@ -63,7 +63,7 @@
 								event.title
 							}}</span>
 							<a :href="event.link" target="_blank"
-								class="text-sm text-blue-500 hover:underline max-w-32 truncate">{{
+								class="text-sm text-blue-500 hover:underline max-w-32 md:max-w-64 truncate">{{
 									event.link }}</a>
 						</div>
 					</div>
