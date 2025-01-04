@@ -18,7 +18,8 @@
 				The Poopometer is a simple app that gauges the state of the world.
 			</h2>
 			<h2 class="text-[#615549]">
-				By analyzing recent world news, it uses gpt-4o to generate an AI-driven assessment of just how chaotic or
+				By analyzing recent world news, it uses gpt-4o to generate an AI-driven assessment of just how chaotic
+				or
 				challenging the current global situation might be.
 			</h2>
 			<h1 class="text-[#615549] text-lg md:text-2xl">

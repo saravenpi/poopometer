@@ -21,16 +21,23 @@
 
 		<div
 			class="flex flex-col md:flex-row p-[16px] md:p-[100px] w-full md:justify-center gap-5 md:gap-10 md:items-center">
-			<!-- Indicator -->
-			<div class="flex flex-col bg-white w-full p-[25px] rounded-3xl shadow-xl h-full justify-center text-center">
-				<div class="text-2xl">
-					We are
+
+			<div class="flex flex-col gap-6">
+				<!-- Indicator -->
+				<div
+					class="flex flex-col bg-white w-full p-[25px] rounded-3xl shadow-xl h-full justify-center text-center">
+					<div class="text-2xl">
+						We are
+					</div>
+					<div class="text-6xl font-extrabold text-[#E5791F] w-full">
+						{{ percentage }}%
+					</div>
+					<div class="text-2xl">
+						in deep sh**
+					</div>
 				</div>
-				<div class="text-6xl font-extrabold text-[#E5791F] w-full">
-					{{ percentage }}%
-				</div>
-				<div class="text-2xl">
-					in deep sh**
+				<div class="bg-white w-full p-[25px] rounded-3xl shadow-xl h-full justify-center text-center">
+					{{ comment }}
 				</div>
 			</div>
 
@@ -93,6 +100,7 @@ export default {
 	data() {
 		return {
 			percentage: 0,
+			comment: 'Loading...',
 			events: [],
 			loading: true
 		};
@@ -114,6 +122,7 @@ export default {
 						easing: 'easeOutQuad',
 						duration: 2000
 					});
+					this.comment = response.comment || 'No comment available.'
 				} else {
 					console.error("Invalid percentage received:", text);
 				}
