@@ -4,6 +4,13 @@ import { promises as fs } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
+
+type Response = {
+	indicator: number;
+	comment: string;
+	review: string;
+};
+
 const config = useRuntimeConfig();
 
 const openai = new OpenAI({
@@ -37,10 +44,11 @@ export default defineEventHandler(async (event) => {
 
 		const content = response.choices[0].message.content?.trim() || '{"indicator": 42, "comment": "Default response"}';
 		const cleanedContent = content.replace(/```json|```/g, '').trim();
-		const result = JSON.parse(cleanedContent);
+		const result: Response = JSON.parse(cleanedContent);
 		return {
 			indicator: result.indicator,
-			comment: result.comment
+			comment: result.comment,
+			review: result.review
 		};
 	} catch (error) {
 		return { indicator: 42, comment: 'An error occurred' };

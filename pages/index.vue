@@ -19,13 +19,11 @@
 			</div>
 		</header>
 
-		<div
-			class="flex flex-col md:flex-row p-[16px] md:p-[100px] w-full md:justify-center gap-5 md:gap-10 md:items-center">
+		<div class="flex flex-col p-[16px] md:p-[100px] w-full gap-5 md:gap-10">
 
 			<div class="flex flex-col gap-6">
 				<!-- Indicator -->
-				<div
-					class="flex flex-col bg-white w-full p-[25px] rounded-3xl shadow-xl h-full justify-center text-center">
+				<div class="flex flex-col bg-white p-[25px] rounded-3xl shadow-xl h-full text-center w-full">
 					<div class="text-2xl">
 						We are
 					</div>
@@ -36,8 +34,19 @@
 						in deep sh**
 					</div>
 				</div>
-				<div class="bg-white w-full p-[25px] rounded-3xl shadow-xl h-full justify-center text-center">
-					{{ comment }}
+				<div class="text-2xl font-bold bg-white w-full p-[25px] md:p-[50px] rounded-3xl shadow-xl text-center">
+					<div v-if="commentLoading" class="flex justify-center items-center">
+						<svg class="animate-spin h-10 w-10 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+							viewBox="0 0 24 24">
+							<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+							</circle>
+							<path class="opacity-75" fill="currentColor"
+								d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+						</svg>
+					</div>
+					<div v-else>
+						{{ comment }}
+					</div>
 				</div>
 			</div>
 
@@ -100,9 +109,10 @@ export default {
 	data() {
 		return {
 			percentage: 0,
-			comment: 'Loading...',
+			comment: '',
 			events: [],
-			loading: true
+			loading: true,
+			commentLoading: true
 		};
 	},
 	mounted() {
@@ -122,7 +132,8 @@ export default {
 						easing: 'easeOutQuad',
 						duration: 2000
 					});
-					this.comment = response.comment || 'No comment available.'
+					this.comment = response.comment || 'No comment available.';
+					this.commentLoading = false;
 				} else {
 					console.error("Invalid percentage received:", text);
 				}
@@ -150,6 +161,7 @@ export default {
 					link: article.link
 				}));
 				this.loading = false;
+
 				this.fetchPercentage();
 				this.events = news.map(article => ({
 					title: article.title,
