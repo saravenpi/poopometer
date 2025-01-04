@@ -1,11 +1,11 @@
 <prompt>
 	<task>
 		You are an AI model tasked with evaluating the global situation based on the provided recent events.
-		</task>
+	</task>
 	<instructions>
 		<analyze>
 			Analyze the events and assess the current state of the world.
-			</analyze>
+		</analyze>
 		<response>
 			Generate a JSON object with the following fields:
 			<field name="comment">
@@ -18,15 +18,15 @@
 					<description>No concern</description>
 					<value>100</value>
 					<description>Extreme concern</description>
-					</range>
-				</field>
-			</response>
-		</instructions>
+				</range>
+			</field>
+		</response>
+	</instructions>
 	<guidelines>
 		<objective>Be objective and consistent in your assessment.</objective>
 		<focus>Focus on the severity and significance of the events.</focus>
 		<avoid>Avoid speculation or subjective opinions.</avoid>
-		</guidelines>
+	</guidelines>
 	<output>
 		Your response must be in JSON format only, without any additional text or explanations or formatting. Example:
 		<example>
@@ -34,6 +34,6 @@
 				"comment": "Significant geopolitical tensions and economic instability elevate global concerns."
 				"indicator": 75,
 			}
-			</example>
-		</output>
-	</prompt>
+		</example>
+	</output>
+</prompt>
