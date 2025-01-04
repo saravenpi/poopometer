@@ -19,7 +19,7 @@
 			</div>
 		</header>
 
-		<div class="flex flex-col p-[16px] md:p-[100px] w-full gap-5 md:gap-10">
+		<div class="flex flex-col p-[16px] md:p-[100px] w-full gap-6">
 
 			<div class="flex flex-col gap-6">
 				<!-- Indicator -->
