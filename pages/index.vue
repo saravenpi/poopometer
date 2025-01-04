@@ -1,6 +1,5 @@
 <template>
-	<div class="flex flex-col justify-between h-screen w-full">
-
+	<div>
 		<Head>
 			<Title>Poopometer</Title>
 		</Head>
