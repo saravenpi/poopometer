@@ -35,7 +35,7 @@
 						in deep sh**
 					</div>
 				</div>
-				<div class="text-2xl font-bold bg-white w-full p-[25px] md:p-[50px] rounded-3xl shadow-xl text-center">
+				<div class="text-xl font-bold bg-white w-full p-[25px] md:p-[50px] rounded-3xl shadow-xl text-center">
 					<div v-if="commentLoading" class="flex justify-center items-center">
 						<svg class="animate-spin h-10 w-10 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
 							viewBox="0 0 24 24">
