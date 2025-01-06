@@ -122,7 +122,7 @@ export default {
 	methods: {
 		async fetchPercentage() {
 			try {
-				const response = await $fetch('http://poopometer-backend-production.up.railway.app/meter', { method: 'POST', body: JSON.stringify(this.events), pick: ['indicator'] });
+				const response = await $fetch('https://poopometer-backend-production.up.railway.app/meter', { method: 'POST', body: JSON.stringify(this.events), pick: ['indicator'] });
 				const indicator = response.indicator;
 				const percentage = parseFloat(indicator);
 				if (!isNaN(percentage) && percentage >= 0 && percentage <= 100) {
