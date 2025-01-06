@@ -1,8 +1,10 @@
 <template>
 	<div>
+
 		<Head>
 			<Title>Poopometer</Title>
 		</Head>
+
 		<!-- Header -->
 		<header class="flex flex-row p-6 md:p-10 w-full justify-between items-center gap-6 flex-wrap">
 			<div class="flex flex-row gap-3 items-center ">
@@ -120,7 +122,7 @@ export default {
 	methods: {
 		async fetchPercentage() {
 			try {
-				const response = await $fetch('/api/meter', { method: 'POST', body: JSON.stringify(this.events), pick: ['indicator'] });
+				const response = await $fetch('http://poopometer-backend-production.up.railway.app/meter', { method: 'POST', body: JSON.stringify(this.events), pick: ['indicator'] });
 				const indicator = response.indicator;
 				const percentage = parseFloat(indicator);
 				if (!isNaN(percentage) && percentage >= 0 && percentage <= 100) {
