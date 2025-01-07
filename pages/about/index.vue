@@ -22,6 +22,9 @@
 				or
 				challenging the current global situation might be.
 			</h2>
+			<h2 class="text-[#615549]">
+				The AI processes the data every 15 minutes to ensure up-to-date insights.
+			</h2>
 			<h1 class="text-[#615549] text-lg md:text-2xl">
 				Made with ❤️ by <a href="https://github.com/saravenpi" class="underline">saravenpi</a>
 			</h1>
